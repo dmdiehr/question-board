@@ -1,0 +1,15 @@
+{{#if editQuestionForm}}
+<div>
+  <form>
+    <div class="form-group">
+      {{input value=title}}
+    </div>
+    <div class="form-group">
+      {{textarea class="big" value=body}}
+    </div>
+    <button {{action 'editQuestion' question}}>Upgrayedd</button>
+  </form>
+</div>
+{{else}}
+    <button {{action 'editQuestionForm'}}>This is kinda stupid</button>
+{{/if}}

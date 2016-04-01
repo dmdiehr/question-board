@@ -1,1 +1,9 @@
-{{question-detail question=model}}
+<h1>{{model.title}}</h1>
+<h5>{{model.author}}</h5>
+<p>
+  {{model.body}}
+</p>
+{{edit-question question=model editQuestion="editQuestion"}}
+<button {{action 'deleteQuestion' model}}>This is REALLY stupid</button><br><br>
+
+<h5>Answers: </h5>
