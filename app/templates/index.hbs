@@ -1,0 +1,8 @@
+<h3 class='text-center'>Today's Questions</h3>
+<hr>
+
+{{#each model.questions as |question|}}
+  <h4>{{question.title}}</h4>
+  <h5>{{question.author}}</h5>
+  <hr>
+{{/each}}
