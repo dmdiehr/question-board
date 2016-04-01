@@ -10,7 +10,7 @@ export default Ember.Component.extend({
     saveQuestion() {
       var params = {
         title: this.get('title') ? this.get('title') : "",
-        text: this.get('body') ? this.get('body') : "",
+        body: this.get('body') ? this.get('body') : "",
         author: this.get('author') ? this.get('author') : "Anonymous"
       };
       this.set('addNewQuestion', false);
