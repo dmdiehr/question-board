@@ -1,0 +1,11 @@
+p {
+  max-width: 400px;
+}
+
+.big {
+  width: 600px;
+  height: 190px;
+  border: 1px solid #999;
+  padding: 5px;
+
+}
