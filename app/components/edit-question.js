@@ -6,6 +6,10 @@ export default Ember.Component.extend({
     editQuestionForm() {
       this.set('editQuestionForm', true);
     },
+    hideEditForm(){
+      this.set('editQuestionForm', false);
+      this.sendAction('dontEdit');
+    },
     editQuestion(question){
       // passing params unnecessary if you sync the input value
       // to the model itself.
@@ -20,7 +24,7 @@ export default Ember.Component.extend({
       this.sendAction('editQuestion', question);
     },
     deleteQuestion(question){
-      this.sendAction('deleteQuestion', question)
+      this.sendAction('deleteQuestion', question);
     }
   }
 

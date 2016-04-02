@@ -11,7 +11,10 @@ export default Ember.Route.extend({
         this.transitionTo('index');
       }
     },
-
+    dontEdit() {
+      //this is very hacky, there's got to be a better way to do this.
+       window.location.reload(true);
+    },
     editQuestion(question) {
 
       // Only needed if being passed params
