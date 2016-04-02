@@ -2,14 +2,15 @@
 <div>
   <form>
     <div class="form-group">
-      {{input value=title}}
+      {{input value=question.title}}
     </div>
     <div class="form-group">
-      {{textarea class="big" value=body}}
+      {{textarea class="big" value=question.body}}
     </div>
     <button {{action 'editQuestion' question}}>Upgrayedd</button>
   </form>
 </div>
 {{else}}
     <button {{action 'editQuestionForm'}}>This is kinda stupid</button>
+    <button {{action 'deleteQuestion' question}}>This is REALLY stupid</button><br><br>
 {{/if}}

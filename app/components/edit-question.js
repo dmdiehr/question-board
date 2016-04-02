@@ -7,14 +7,20 @@ export default Ember.Component.extend({
       this.set('editQuestionForm', true);
     },
     editQuestion(question){
-      console.log(question)
-      var params = {
-        title: this.get('title'),
-        body: this.get('body'),
-        author: this.get('author')
-      };
+      // passing params unnecessary if you sync the input value
+      // to the model itself.
+
+      // var params = {
+      //   title: this.get('title'),
+      //   body: this.get('body'),
+      //   author: this.get('author')
+      // };
+
       this.set('editQuestionForm', false);
-      this.sendAction('editQuestion', question, params);
+      this.sendAction('editQuestion', question);
+    },
+    deleteQuestion(question){
+      this.sendAction('deleteQuestion', question)
     }
   }
 

@@ -12,12 +12,14 @@ export default Ember.Route.extend({
       }
     },
 
-    editQuestion(question, params) {
-      Object.keys(params).forEach(function(key) {
-        if(params[key]!==undefined) {
-          question.set(key,params[key]);
-        }
-      });
+    editQuestion(question) {
+
+      // Only needed if being passed params
+      // Object.keys(params).forEach(function(key) {
+      //   if(params[key]!==undefined) {
+      //     question.set(key,params[key]);
+      //   }
+      // });
       question.save();
     }
   }

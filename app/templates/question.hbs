@@ -4,9 +4,7 @@
   {{model.body}}
 </p>
 <h4>-{{model.author}}</h4>
-{{edit-question question=model editQuestion="editQuestion"}}
-<button {{action 'deleteQuestion' model}}>This is REALLY stupid</button><br><br>
-
+{{edit-question question=model editQuestion="editQuestion" deleteQuestion="deleteQuestion"}}
 <hr>
 
 <h4>Answers: </h4>
