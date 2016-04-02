@@ -7,8 +7,10 @@
 {{edit-question question=model editQuestion="editQuestion" deleteQuestion="deleteQuestion" dontEdit="dontEdit"}}
 <hr>
 
-<h4>Answers: </h4>
+<h4 class='text-center'>Answers</h4>
 {{#each model.answers as |answer|}}
   <h5>{{answer.author}} says:</h5>
   <p>"{{answer.text}}"</p>
 {{/each}}
+
+{{new-answer saveAnswer="saveAnswer" question=model}}
