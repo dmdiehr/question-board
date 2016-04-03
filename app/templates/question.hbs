@@ -11,6 +11,9 @@
 {{#each model.answers as |answer|}}
   <h5>{{answer.author}} says:</h5>
   <p>"{{answer.text}}"</p>
+  <button {{action "deleteAnswer" answer}}>Too Dumb</button>
+  <br><br>
+  <hr>
 {{/each}}
 
 {{new-answer saveAnswer="saveAnswer" question=model}}
