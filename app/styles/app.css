@@ -12,5 +12,10 @@ p {
 button {
   float:left;
   margin: 10px;
-  
+
+}
+
+.score-span {
+  font-weight: 200;
+  padding-right: 10px;
 }

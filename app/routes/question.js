@@ -4,10 +4,6 @@ export default Ember.Route.extend({
   model(params) {
     return this.store.findRecord('question', params.question_id);
   },
-  score: Ember.computed('question.upVotes', 'question.downVotes', function(){
-    console.log("this does nothing ever does it?");
-    return (this.get('question.UpVotes') - this.get('question.downVotes'));
-  }),
   actions: {
     deleteQuestion(question) {
       if(confirm('Forreals? RU sure?')){

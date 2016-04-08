@@ -5,5 +5,8 @@ export default DS.Model.extend({
   text: DS.attr(),
   upVotes: DS.attr(),
   downVotes: DS.attr(),
-  question: DS.belongsTo('question', {async: true})
+  question: DS.belongsTo('question', {async: true}),
+  score: Ember.computed('upVotes', 'downVotes', function(){
+    return (this.get('upVotes') - this.get('downVotes'));
+  })
 });
