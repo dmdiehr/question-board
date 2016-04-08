@@ -1,8 +1,7 @@
 <h1>{{model.title}}</h1>
 
-<p>
-  {{model.body}}
-</p>
+  {{{text-format model.body}}}
+
 <h4>-{{model.author}}</h4>
 {{edit-question question=model editQuestion="editQuestion" deleteQuestion="deleteQuestion" dontEdit="dontEdit"}}
 <hr>
@@ -10,7 +9,7 @@
 <h4 class='text-center'>Answers</h4>
 {{#each model.answers as |answer|}}
   <h5>{{answer.author}} says:</h5>
-  <p>"{{answer.text}}"</p>
+  {{{text-format answer.text}}}
   <button {{action "deleteAnswer" answer}}>Too Dumb</button>
   <br><br>
   <hr>
