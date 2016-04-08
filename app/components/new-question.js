@@ -11,7 +11,9 @@ export default Ember.Component.extend({
       var params = {
         title: this.get('title') ? this.get('title') : "",
         body: this.get('body') ? this.get('body') : "",
-        author: this.get('author') ? this.get('author') : "Anonymous"
+        author: this.get('author') ? this.get('author') : "Anonymous",
+        downVotes: 0,
+        upVotes: 0
       };
       this.set('addNewQuestion', false);
       this.sendAction('saveQuestion', params);

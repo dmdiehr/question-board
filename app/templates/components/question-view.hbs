@@ -1,0 +1,17 @@
+{{log model.score}}
+<h1>{{model.title}} Score: {{model.score}}</h1>
+
+  {{{text-format model.body}}}
+
+<h4>-{{model.author}}</h4>
+{{edit-question question=model editQuestion="editQuestion" deleteQuestion="deleteQuestion" dontEdit="dontEdit"}}
+<hr>
+
+<h4 class='text-center'>Answers</h4>
+{{#each model.answers as |answer|}}
+  <h5>{{answer.author}} says:</h5>
+  {{{text-format answer.text}}}
+  <button {{action "deleteAnswer" answer}}>Too Dumb</button>
+  <br><br>
+  <hr>
+{{/each}}
