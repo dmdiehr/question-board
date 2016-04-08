@@ -12,6 +12,7 @@ export default Ember.Component.extend({
         title: this.get('title') ? this.get('title') : "",
         body: this.get('body') ? this.get('body') : "",
         author: this.get('author') ? this.get('author') : "Anonymous",
+        timestamp: Date.now(),
         downVotes: 0,
         upVotes: 0
       };

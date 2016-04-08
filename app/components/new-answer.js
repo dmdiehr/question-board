@@ -14,6 +14,7 @@ export default Ember.Component.extend({
         text: this.get('text') ? this.get('text') : "",
         author: this.get('author') ? this.get('author') : "Anonymous",
         question: this.get('question'),
+        timestamp: Date.now(),
         downVotes: 0,
         upVotes: 0
       };
