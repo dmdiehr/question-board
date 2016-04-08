@@ -1,6 +1,6 @@
-# _Question Board_
+# _Question Board 2.0_
 
-#### _Ember independent project 4/1/2016_
+#### _Ember Extended Independent Project 4/7/2016_
 
 #### By _**David Diehr**_
 
@@ -24,7 +24,7 @@ _None._
 
 ## Technologies Used
 
-_JavaScript, emberjs,Node.js, HTML/handlebars, CSS_
+_JavaScript, emberjs, Node.js, HTML/handlebars, CSS_
 
 ### Legal
 
