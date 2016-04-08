@@ -2,11 +2,6 @@
 <hr>
 
 
-{{#each model.questions as |question|}}
-
-  <h4><span class="score-span">{{question.score}}</span>{{#link-to 'question' question.id}}{{question.title}}{{/link-to}}</h4>
-  <h5>-{{question.author}}</h5>
-  <hr>
-{{/each}}
+{{question-list questions=model.questions}}
 
 {{new-question saveQuestion="saveQuestion"}}
