@@ -1,0 +1,8 @@
+<h5>Score: {{answer.score}}</h5>
+  <h5>{{answer.author}} says:</h5>
+  {{{text-format answer.text}}}
+  <button {{action 'upVoteAnswer' answer}}>UpVote</button>
+  <button {{action 'downVoteAnswer' answer}}>DownVote</button>
+  <button {{action "deleteAnswer" answer}}>Too Dumb</button>
+  <br><br>
+  <hr>

@@ -29,6 +29,34 @@ export default Ember.Route.extend({
     deleteAnswer(answer) {
       answer.destroyRecord();
       this.transitionTo('question');
+    },
+    upVoteQuestion(question){
+      var newTotal = question.get('upVotes') + 1;
+      this.store.findRecord('question', question.id).then(function(question){
+        question.set('upVotes', newTotal);
+      });
+      question.save();
+    },
+    downVoteQuestion(question){
+      var newTotal = question.get('downVotes') + 1;
+      this.store.findRecord('question', question.id).then(function(question){
+        question.set('downVotes', newTotal);
+      });
+      question.save();
+    },
+    upVoteAnswer(answer){
+      var newTotal = answer.get('upVotes') + 1;
+      this.store.findRecord('answer', answer.id).then(function(answer){
+        answer.set('upVotes', newTotal);
+      });
+      answer.save();
+    },
+    downVoteAnswer(answer){
+      var newTotal = answer.get('downVotes') + 1;
+      this.store.findRecord('answer', answer.id).then(function(answer){
+        answer.set('downVotes', newTotal);
+      });
+      answer.save();
     }
   }
 });
