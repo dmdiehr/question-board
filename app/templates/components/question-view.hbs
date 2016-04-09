@@ -1,7 +1,8 @@
 <h1>{{question.title}}</h1>
+{{{timestamp-format question.timestamp}}}
 <h5>Score: {{question.score}}</h5>
 
-{{{text-format question.body}}}
+{{{body-format question.body}}}
 
 <button {{action 'upVoteQuestion' question}}>UpVote</button>
 <button {{action 'downVoteQuestion' question}}>DownVote</button>
