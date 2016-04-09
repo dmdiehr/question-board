@@ -7,7 +7,12 @@ export default Ember.Route.extend({
   actions: {
     deleteQuestion(question) {
       if(confirm('Forreals? RU sure?')){
-        question.destroyRecord();
+        var deleteChildren = question.get('answers').map(function(answer){
+          return answer.destroyRecord();
+        });
+        Ember.RSVP.all(deleteChildren).then(function(){
+          return question.destroyRecord();
+        });
         this.transitionTo('index');
       }
     },
