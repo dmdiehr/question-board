@@ -9,12 +9,6 @@ p {
   padding: 5px;
 }
 
-button {
-  float:left;
-  margin: 10px;
-
-}
-
 .score-span {
   font-weight: 200;
   padding-right: 10px;

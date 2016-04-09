@@ -1,0 +1,14 @@
+{{#unless userName.signedIn}}
+  <div>
+    <form>
+      <div class="form-group">
+        {{input value=nameInput}}
+      </div>
+      <button {{action 'saveUser'}}>Sign-In</button>
+    </form>
+  </div>
+  <hr>
+  {{else}}
+  {{userName.name}}
+  <hr>
+{{/unless}}
