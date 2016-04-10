@@ -6,7 +6,13 @@ export default Ember.Component.extend({
   actions: {
     saveUser(){
       var newName = this.get('nameInput');
+      this.set('nameInput', "");
       this.get('userName').setName(newName);
+      this.get('userName').requestFalse();
+    },
+    dontSaveUser(){
+      this.set('nameInput', "");
+      this.get('userName').requestFalse();
     }
   }
 });

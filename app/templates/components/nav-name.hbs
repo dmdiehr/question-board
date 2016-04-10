@@ -1,0 +1,6 @@
+{{#if userName.signedIn}}
+  <span class='username-span'>{{userName.name}}</span>
+  <span class='signout-span' {{action "requestSignOut"}}>(sign-out)</span>
+{{else}}
+  <span class="signin-span" {{action "requestSignIn"}}>(sign-in)</span>
+{{/if}}

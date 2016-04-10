@@ -1,14 +1,12 @@
-{{#unless userName.signedIn}}
-  <div>
+{{#if userName.request}}
+  <div class="signin-component">
     <form>
       <div class="form-group">
         {{input value=nameInput}}
       </div>
       <button {{action 'saveUser'}}>Sign-In</button>
+      <button {{action 'dontSaveUser'}}>Nah</button>
     </form>
   </div>
   <hr>
-  {{else}}
-  {{userName.name}}
-  <hr>
-{{/unless}}
+{{/if}}

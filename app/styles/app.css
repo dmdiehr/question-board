@@ -19,3 +19,23 @@ p {
 .apostrophe {
   font-weight: bolder;
 }
+
+.nav-sign {
+  margin-right: 8%;
+  margin-top: 13px;
+}
+.username-span {
+  font-size: 2em;
+}
+.signout-span {
+  position: relative;
+  bottom: 5px;
+  color: #76a7cf;
+}
+.signin-span {
+  color: #a80d18;
+}
+.signin-component {
+  text-align: center;
+  padding: 5%;
+}
