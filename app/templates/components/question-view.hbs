@@ -1,17 +1,25 @@
-<h1>{{question.title}}</h1>
-{{{timestamp-format question.timestamp}}}
-<h5>Score: {{question.score}}</h5>
+{{#if userName.request}}
+  {{user-login}}
+{{else}}
+  {{#if userName.signedIn}}
+    <button {{action 'upVoteQuestion' question}}>UpVote</button>
+    <button {{action 'downVoteQuestion' question}}>DownVote</button>
+  {{/if}}
 
-{{{body-format question.body}}}
+  <h1>{{question.title}}</h1>
+  {{{timestamp-format question.timestamp}}}
+  <h5>Score: {{question.score}}</h5>
 
-<button {{action 'upVoteQuestion' question}}>UpVote</button>
-<button {{action 'downVoteQuestion' question}}>DownVote</button>
+  {{{body-format question.body}}}
 
-<h4>-{{question.author}}</h4>
-{{edit-question question=question editQuestion="editQuestion" deleteQuestion="deleteQuestion" dontEdit="dontEdit"}}
-<hr>
 
-<h4 class='text-center'>Answers</h4>
-{{#each question.answers as |answer|}}
-  {{answer-tile answer=answer deleteAnswer="deleteAnswer" upVoteAnswer="upVoteAnswer" downVoteAnswer="downVoteAnswer"}}
-{{/each}}
+  <h4>-{{question.author}}</h4>
+  {{edit-question question=question editQuestion="editQuestion" deleteQuestion="deleteQuestion" dontEdit="dontEdit"}}
+  <hr>
+
+  <h4 class='text-center'>Answers</h4>
+  {{#each question.answers as |answer|}}
+    {{answer-tile answer=answer deleteAnswer="deleteAnswer" upVoteAnswer="upVoteAnswer" downVoteAnswer="downVoteAnswer"}}
+  {{/each}}
+
+{{/if}}

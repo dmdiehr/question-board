@@ -8,7 +8,7 @@ export default Ember.Service.extend({
       return true;
     }
     else {
-      return false
+      return false;
     }
   }),
   isAdmin: Ember.computed('name', function(){

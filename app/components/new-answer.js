@@ -9,7 +9,9 @@ export default Ember.Component.extend({
       this.set('text', "");
       this.set('author', "");
     },
-
+    dontSaveAnswer(){
+      this.set('addNewAnswer', false);
+    },
     saveAnswer() {
       var params = {
         text: this.get('text') ? this.get('text') : "",
